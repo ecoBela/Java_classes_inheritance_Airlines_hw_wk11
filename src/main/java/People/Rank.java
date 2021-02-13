@@ -1,16 +1,20 @@
 package People;
 
 public enum Rank {
-    CAPTAIN,
-    FIRST_OFFICER,
-    SECOND_OFFICER,
-    FLIGHT_ENGINEER,
-    IN_FLIGHT_MANAGER,
-    FLIGHT_ATTENDANT;
+    CAPTAIN(1),
+    FIRST_OFFICER(2),
+    SECOND_OFFICER(3),
+    FLIGHT_ENGINEER(4),
+    IN_FLIGHT_MANAGER(5),
+    FLIGHT_ATTENDANT(6);
 
-    private final String rank;
+    private final int value;
 
-    Rank(){
+    Rank(int value){
+        this.value = value;
+    }
 
+    public int getValue() {
+        return value;
     }
 }
