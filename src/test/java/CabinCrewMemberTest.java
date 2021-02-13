@@ -18,5 +18,10 @@ public class CabinCrewMemberTest {
         assertEquals("Maya Angelou", cabinCrewMember.getName());
     }
 
+    @Test
+    public void hasRank(){
+        assertEquals(Rank.CAPTAIN, cabinCrewMember.getRank());
+    }
+
 
 }

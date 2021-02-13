@@ -9,4 +9,7 @@ public class CabinCrewMember extends Person{
     }
 
 
+    public Rank getRank() {
+        return rank;
+    }
 }
