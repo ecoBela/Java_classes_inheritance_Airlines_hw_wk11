@@ -15,5 +15,7 @@ public abstract class Person {
         return "I believe I can fly";
     }
 
-
+    public String relayMessage(){
+        return "Please fasten your seatbelts";
+    };
 }
