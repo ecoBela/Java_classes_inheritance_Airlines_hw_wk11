@@ -64,12 +64,16 @@ public class Flight {
         return this.departureTime;
     }
 
+    public boolean seatsAreAvailable() {
+        return getNumberOfAvailableSeats() > 0;
+    }
+
     public int getNumberOfAvailableSeats(){
         return this.plane.getCapacity() - this.passengers.size();
     }
 
-//    public int getPassengersListSize(){
-//    return this.passengers.size()}
+
+
 
 //    public int addPassengerIfCapacity(){
 //

@@ -94,18 +94,30 @@ public class FlightTest {
     }
 
     @Test
+    public void checkSeatsAvailableTrueOrFalse(){
+        assertEquals(true, flight.seatsAreAvailable());
+    }
+
+    @Test
     public void checkNumberOfAvailableSeats(){
         assertEquals(3, flight.getNumberOfAvailableSeats());
     }
 
+
     @Test
-    public void addPassengerIfCapacity(){
-//        passenger3 = new Passenger("Kady", 1)
-//        seatAvailability = flight.getPlane().getCapacity - flight.getPassengers().size
-//        if (seatAvailability > 0){
-//        flight.passengers.add(passenger3)}
-//        assertEquals(3, flight.getPassengers().size());
+    public void addPassenger(){
+        Passenger passenger3 = new Passenger("Kady", 1);
+        if (flight.getNumberOfAvailableSeats() > 0)
+        passengers.add(passenger3);
+        assertEquals(3, flight.getPassengers().size());
+        assertEquals(2, flight.getNumberOfAvailableSeats());
     }
+
+//    @Test
+//    public void addPassengerIfSeatsAvailable(){
+//        Passenger passenger3 = new Passenger("Kady", 1);
+////        assertEquals(3, flight.getPassengers().size());
+//    }
 
 
 }
