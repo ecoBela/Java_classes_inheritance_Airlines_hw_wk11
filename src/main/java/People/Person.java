@@ -10,4 +10,10 @@ public abstract class Person {
     public String getName() {
         return this.name;
     }
+
+    public String flyPlane() {
+        return "I believe I can fly";
+    }
+
+
 }
