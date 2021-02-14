@@ -72,11 +72,13 @@ public class Flight {
         return this.plane.getCapacity() - this.passengers.size();
     }
 
+    public int addPassengerIfSeatsAvailable(Passenger passenger) {
+        if(seatsAreAvailable()) {
+            this.passengers.add(passenger);
+        }
+        return getPassengers().size();
+    }
 
 
-
-//    public int addPassengerIfCapacity(){
-//
-//    }
 
 }

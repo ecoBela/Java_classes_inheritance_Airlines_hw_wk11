@@ -18,9 +18,15 @@ public class FlightTest {
     Passenger passenger2;
     ArrayList<Passenger> passengers;
 
+
     CabinCrewMember cabinCrewMember1;
     CabinCrewMember cabinCrewMember2;
     ArrayList<CabinCrewMember> cabinCrewMembers;
+
+    Passenger passenger3;
+    Passenger passenger4;
+    Passenger passenger5;
+    Passenger passenger6;
 
     @Before
     public void before(){
@@ -37,6 +43,14 @@ public class FlightTest {
         passengers = new ArrayList<Passenger>();
         passengers.add(passenger1);
         passengers.add(passenger2);
+
+        passenger3 = new Passenger("Kady", 1);
+        passenger4 = new Passenger("Cole", 1);
+        passenger5 = new Passenger("Shona", 1);
+        passenger6 = new Passenger("Shayne", 1);
+
+
+
 
         flight = new Flight(pilot1, Plane.MINI_BOEING747, cabinCrewMembers,
                 passengers, "FR832", "LDN",
@@ -113,11 +127,14 @@ public class FlightTest {
         assertEquals(2, flight.getNumberOfAvailableSeats());
     }
 
-//    @Test
-//    public void addPassengerIfSeatsAvailable(){
-//        Passenger passenger3 = new Passenger("Kady", 1);
-////        assertEquals(3, flight.getPassengers().size());
-//    }
+    @Test
+    public void addPassengerIfSeatsAvailable(){
+        assertEquals(3, flight.addPassengerIfSeatsAvailable(passenger3));
+        assertEquals(4, flight.addPassengerIfSeatsAvailable(passenger4));
+        assertEquals(5, flight.addPassengerIfSeatsAvailable(passenger5));
+        assertEquals(5, flight.addPassengerIfSeatsAvailable(passenger6));
+
+    }
 
 
 }
