@@ -38,7 +38,7 @@ public class FlightTest {
         passengers.add(passenger1);
         passengers.add(passenger2);
 
-        flight = new Flight(pilot1, Plane.BOEING745, cabinCrewMembers,
+        flight = new Flight(pilot1, Plane.MINI_BOEING747, cabinCrewMembers,
                 passengers, "FR832", "LDN",
                 "JFK", "5.30pm");
     }
@@ -50,7 +50,7 @@ public class FlightTest {
 
     @Test
     public void hasPlane(){
-        assertEquals(Plane.BOEING745, flight.getPlane());
+        assertEquals(Plane.MINI_BOEING747, flight.getPlane());
     }
 
     @Test
@@ -81,6 +81,30 @@ public class FlightTest {
     @Test
     public void hasDepartureTime(){
         assertEquals("5.30pm", flight.getDepartureTime());
+    }
+
+    @Test
+    public void checkPlaneCapacity(){
+        assertEquals(5, flight.getPlane().getCapacity());
+    }
+
+    @Test
+    public void checkPassengerListSize(){
+        assertEquals(2, flight.getPassengers().size());
+    }
+
+    @Test
+    public void checkNumberOfAvailableSeats(){
+        assertEquals(3, flight.getNumberOfAvailableSeats());
+    }
+
+    @Test
+    public void addPassengerIfCapacity(){
+//        passenger3 = new Passenger("Kady", 1)
+//        seatAvailability = flight.getPlane().getCapacity - flight.getPassengers().size
+//        if (seatAvailability > 0){
+//        flight.passengers.add(passenger3)}
+//        assertEquals(3, flight.getPassengers().size());
     }
 
 

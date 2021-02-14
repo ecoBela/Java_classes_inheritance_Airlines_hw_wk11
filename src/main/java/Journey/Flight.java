@@ -33,35 +33,46 @@ public class Flight {
 
 
     public Pilot getPilot() {
-        return pilot;
+        return this.pilot;
     }
 
     public Plane getPlane() {
-        return plane;
+        return this.plane;
     }
 
     public ArrayList<CabinCrewMember> getCrewMembers() {
-        return crewMembers;
+        return this.crewMembers;
     }
 
     public ArrayList<Passenger> getPassengers() {
-        return passengers;
+        return this.passengers;
     }
 
     public String getFlightNumber() {
-        return flightNumber;
+        return this.flightNumber;
     }
 
     public String getDestination() {
-        return destination;
+        return this.destination;
     }
 
     public String getDepartureAirport() {
-        return departureAirport;
+        return this.departureAirport;
     }
 
     public String getDepartureTime() {
-        return departureTime;
+        return this.departureTime;
     }
+
+    public int getNumberOfAvailableSeats(){
+        return this.plane.getCapacity() - this.passengers.size();
+    }
+
+//    public int getPassengersListSize(){
+//    return this.passengers.size()}
+
+//    public int addPassengerIfCapacity(){
+//
+//    }
 
 }
