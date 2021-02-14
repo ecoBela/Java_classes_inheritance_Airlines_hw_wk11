@@ -53,5 +53,10 @@ public class FlightTest {
         assertEquals(Plane.BOEING745, flight.getPlane());
     }
 
+    @Test
+    public void hasCabinCrewList(){
+        assertEquals(cabinCrewMembers, flight.getCrewMembers());
+    }
+
 
 }
